@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.list-product {
+  margin: 2rem 1rem;
+}
+.item-product {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.img-product {
+  width: 24%;
+  position: relative;
+  margin: auto;
+  // box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+  //   rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  //   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.img-product i {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  right: 10px;
+}
+
+.img img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.carousel {
+  width: 100%;
+  display: none;
+  position: relative;
+}
+.carousel i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.carousel i:hover {
+  color: #c84747;
+}
+.carousel img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+// hover
+.list-product .item-product .img-product:hover .img {
+  display: none;
+}
+.list-product .item-product .img-product:hover .carousel {
+  display: block;
+  transform: scale(1.03);
+}
+
+//like
+.like {
+  background-color: #1b1b1b !important;
+  border: #1b1b1b solid 1px !important;
+}
+.like:hover {
+  background-color: #c84747 !important;
+  color: #111 !important;
+}
+//modal
+.card-body {
+  h5 {
+    text-align: center;
+  }
+  p {
+    font-weight: 350;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+.card-img {
+  width: 80%;
+  height: 80%;
+}
+// buy
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+button {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+button p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Buy";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover p::before {
+  width: 100%;
+}
+
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}

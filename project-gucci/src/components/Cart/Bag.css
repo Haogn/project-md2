@@ -1,0 +1,49 @@
+h1 {
+  text-align: center;
+}
+.container {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.product {
+  width: 30%;
+  text-align: center;
+}
+
+.cart-img {
+  width: 30%;
+  text-align: center;
+}
+
+.total {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.checkout {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.cart {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cart:hover {
+  background-color: #555;
+}

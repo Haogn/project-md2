@@ -1,0 +1,27 @@
+footer {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  ul li {
+    list-style: none;
+  }
+  .footer-container {
+    background-color: #1b1b1b;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    width: calc(100wh / 5);
+    .footer-container ul {
+      padding: 0;
+    }
+    .footer-services {
+      width: 200px;
+    }
+    .footer-signup {
+      width: 200px;
+    }
+    .footer-container {
+      padding: 30px;
+    }
+  }
+}
